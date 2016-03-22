@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.uhsl.flowmessage.flowmessagev2.SettingsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings_coordinator_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/settings_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Server Address"
+                    android:singleLine="true"
+                    android:id="@+id/settings_server_address_editText"
+                    android:text="http://ws-uat.flowworld.com"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="OAuth Server key"
+                    android:singleLine="true"
+                    android:id="@+id/settings_server_key_editText"
+                    android:text="Ph3bY5kkU4P6vmtT"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="OAuth Server Secret"
+                    android:singleLine="true"
+                    android:id="@+id/settings_sever_secret_editText"
+                    android:text="Sd1SVBfYtGfQvUCR"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Settings"
+                android:layout_gravity="right"
+                android:onClick="doSaveSettings"
+                android:id="@+id/settings_save_btn"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reconnect"
+                android:layout_gravity="right"
+                android:onClick="doReconnect"
+                android:id="@+id/settings_reconnect_btn"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
